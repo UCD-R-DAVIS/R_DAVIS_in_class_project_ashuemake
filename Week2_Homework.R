@@ -7,9 +7,15 @@ hw2
 is.na(hw2)
 
 #this is how to remove the NA values from your vector
+# !is - way of saying "is not" 
+# could also use na.omit(hw2) to achieve the same outcome
+# hw2[complete.cases(hw2)] can also be used
+
 hw2[!is.na(hw2)]
 
 hw2[!is.na(hw2)] [hw2[!is.na(hw2)]>= 14 & hw2[!is.na(hw2)]<=38] 
+# hw2[!is.na(hw2) & hw2>= 14 & hw2 <= 38]
+
 prob1 <- hw2[!is.na(hw2)] [hw2[!is.na(hw2)]>= 14 & hw2[!is.na(hw2)]<=38]
 
 times3<-prob1*3
