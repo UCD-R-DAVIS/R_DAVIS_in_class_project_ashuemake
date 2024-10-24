@@ -112,3 +112,13 @@ nrow(ave_weight)
 surveys_challenge <- surveys %>%
   filter(year < 1995) %>%
   select(year, sex, weight)
+
+## challenge
+
+surveys %>% 
+  select(year, record_id, weight) %>% 
+  group_by(year) %>% 
+  filter(!is.na(weight)) %>% 
+  mutate(weigh_kg = weight/1000) %>% 
+  summarize(max_weight_g = max(weight),  
+            max_weight_kg =max(weight)) %>% 
