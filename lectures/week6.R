@@ -68,6 +68,7 @@ ggplot(data =yearly_counts, mapping = aes(x=year, y=n, group = species_id)) +
 install.packages('ggtheme')
 
 install.packages('tigris')
+install.packages('sf')
 
 ca_counties = tigris::counties(state='CA', class = 'sf', year = 2023)
 

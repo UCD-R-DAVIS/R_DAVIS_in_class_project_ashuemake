@@ -6,5 +6,5 @@ laps_running <- lap %>%
   filter(minutes_per_mile < 10 & minutes_per_mile > 5) %>% 
   filter(total_elapsed_time_s > 60)
 
-laps_running <- mutate(pace_cat = case_when( pace <= 6, "fast",
-                           ifelse(pace >=6  & pace < 8, "medium", pace <8, "slow")))
+laps_running <- mutate(category = case_when( pace <= 6, "fast",
+                           ifelse(pace >=6  & pace < 8, "medium", pace <8,  "slow")))
